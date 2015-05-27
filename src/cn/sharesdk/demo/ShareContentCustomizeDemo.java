@@ -20,22 +20,22 @@ import cn.sharesdk.onekeyshare.ShareContentCustomizeCallback;
  *本类会在{@link DemoPage#showShare(boolean, String)}方法
  *中被调用。
  */
-public class ShareContentCustomizeDemo implements ShareContentCustomizeCallback {
-
-	public void onShare(Platform platform, ShareParams paramsToShare) {
-		if(platform instanceof CustomPlatform){
-			return;
-		}
-		int id = ShareSDK.platformNameToId(platform.getName());
-		if (MainActivity.TEST_TEXT != null && MainActivity.TEST_TEXT.containsKey(id)) {
-			String text = MainActivity.TEST_TEXT.get(id);
-			paramsToShare.setText(text);
-		} else if ("Twitter".equals(platform.getName())) {
-			// 改写twitter分享内容中的text字段，否则会超长，
-			// 因为twitter会将图片地址当作文本的一部分去计算长度
-			String text = platform.getContext().getString(R.string.share_content_short);
-			paramsToShare.setText(text);
-		}
-	}
-
-}
+//public class ShareContentCustomizeDemo implements ShareContentCustomizeCallback {
+//
+//	public void onShare(Platform platform, ShareParams paramsToShare) {
+//		if(platform instanceof CustomPlatform){
+//			return;
+//		}
+//		int id = ShareSDK.platformNameToId(platform.getName());
+//		if (MainActivity.TEST_TEXT != null && MainActivity.TEST_TEXT.containsKey(id)) {
+//			String text = MainActivity.TEST_TEXT.get(id);
+//			paramsToShare.setText(text);
+//		} else if ("Twitter".equals(platform.getName())) {
+//			// 改写twitter分享内容中的text字段，否则会超长，
+//			// 因为twitter会将图片地址当作文本的一部分去计算长度
+//			String text = platform.getContext().getString(R.string.share_content_short);
+//			paramsToShare.setText(text);
+//		}
+//	}
+//
+//}
