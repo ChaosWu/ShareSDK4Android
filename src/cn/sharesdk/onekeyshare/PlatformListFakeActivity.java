@@ -14,7 +14,7 @@ import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.ShareSDK;
 
 public class PlatformListFakeActivity extends FakeActivity {
-	protected HashMap<String, Object> shareParamsMap;
+	protected HashMap<String, Object> shareParamsMap;//分享学习
 	protected boolean silent;
 	protected ArrayList<CustomerLogo> customerLogos;
 	protected HashMap<String, String> hiddenPlatforms;

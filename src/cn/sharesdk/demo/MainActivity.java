@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
 
 	protected void showShare() {
 		OnekeyShare ok = new OnekeyShare();
+		ok.setTheme(OnekeyShareTheme.CLASSIC);
 		ok.show(this);
 
 	}
